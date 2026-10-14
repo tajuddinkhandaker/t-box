@@ -52,14 +52,21 @@ A terminal console that runs entirely in Docker and uses Ollama for local AI wor
    Copy-Item .env.example .env
    ```
    The `.env.example` file is included in the repository as a template. Copy it to `.env` and modify as needed.
-=======
+   Note: `.env` files are ignored by Git (see `.gitignore`). The `.env.example` template is tracked so you can see the required variables.
 
 3. Edit `.env` to set `OLLAMA_MODELS_DIR` if needed
 
-4. Build and start Docker containers:
-   ```bash
-   docker compose up -d
-   ```
+### Example OLLAMA_MODELS_DIR assignment
+
+To use a custom models directory (e.g., on a different drive), add to your `.env` file:
+
+```powershell
+# Windows: Use G drive for Ollama models
+OLLAMA_MODELS_DIR=G:/AppData/Ollama/Models
+
+# Or a custom path
+OLLAMA_MODELS_DIR=/custom/path/to/models
+```
 
 ### Running T-BOX
 
@@ -115,4 +122,3 @@ MIT
 ## Repository
 
 https://github.com/tajuddinkhandaker/t-box
-=======
