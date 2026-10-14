@@ -51,6 +51,8 @@ A terminal console that runs entirely in Docker and uses Ollama for local AI wor
    ```powershell
    Copy-Item .env.example .env
    ```
+   The `.env.example` file is included in the repository as a template. Copy it to `.env` and modify as needed.
+=======
 
 3. Edit `.env` to set `OLLAMA_MODELS_DIR` if needed
 
