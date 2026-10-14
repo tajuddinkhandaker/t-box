@@ -1,0 +1,10 @@
+tbox/__pycache__/
+.npm-cache/
+.env
+.env.*
+!.env.example
+.tbox_history
+docs/
+docker-tools/
+tbox.ps1
+AGENT.md

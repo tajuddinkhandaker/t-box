@@ -1,0 +1,38 @@
+{
+  "name": "tbox",
+  "version": "0.1.0",
+  "description": "Docker-first local Ollama terminal console",
+  "license": "MIT",
+  "bin": {
+    "tbox": "bin/tbox.js"
+  },
+  "files": [
+    "bin/tbox",
+    "bin/tbox.js",
+    "tbox/__init__.py",
+    "tbox/__main__.py",
+    "tbox/catalog.py",
+    "tbox/cli.py",
+    "tbox/ollama.py",
+    "tbox/router.py",
+    "Dockerfile",
+    "compose.yaml",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": ["ollama", "cli", "local-ai", "docker"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tajuddinkhandaker/t-box.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tajuddinkhandaker/t-box/issues"
+  },
+  "homepage": "https://github.com/tajuddinkhandaker/t-box#readme",
+  "publishConfig": {
+    "access": "public"
+  }
+}

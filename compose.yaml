@@ -1,0 +1,22 @@
+services:
+  tbox:
+    build: .
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/app
+    environment:
+      OLLAMA_HOST: http://ollama:11434
+      TBOX_DEFAULT_MODEL: qwen3:14b
+    depends_on:
+      - ollama
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: ${OLLAMA_MODELS_DIR:-G:/AppData/Ollama/Models}
+        target: /root/.ollama/models
+    ports:
+      - "127.0.0.1:11434:11434"
